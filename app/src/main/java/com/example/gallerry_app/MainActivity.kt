@@ -1,6 +1,5 @@
 package com.example.gallerry_app
 
-import android.content.Context
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,7 +11,6 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import java.lang.Exception
 
-import java.util.jar.Manifest
 import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
@@ -43,7 +41,7 @@ class MainActivity : AppCompatActivity() {
             // get all images from storage
             allPicture=getAllImages()
             //set Adapter to recycler
-            imageRecycler?.adapter=ImageAdapter(this,allPicture)
+            imageRecycler?.adapter=ImageAdapter(this,allPicture !!)
             progressBar?.visibility=View.GONE
         }
     }
