@@ -8,4 +8,5 @@ class Image {
         this.imagePath = imagePath
         this.imageName = imageName
     }
+    constructor(){}
 }
